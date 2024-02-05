@@ -1,4 +1,5 @@
 from django.db import models
+
 import datetime
 from django.utils import timezone
 
@@ -19,3 +20,4 @@ class Choice(models.Model):
         return self.choice_text
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
